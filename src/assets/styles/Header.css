@@ -1,0 +1,76 @@
+.header__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.branding__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+.naming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.naming h1 {
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 3.8rem;
+}
+
+.naming p {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Tilda';
+    font-weight: 700;
+}
+
+.catalog__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 186px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    font-family: 'Unbounded';
+    font-size: 1.8rem;
+    gap: 10px;
+    margin-left: 34px;
+}
+
+.dots {
+    width: 26px;
+}
+
+.header__nav {
+    margin: 0 auto;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.header__nav ul li a {
+    font-size: 2rem;
+}
+
+.header__tel {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Unbounded';
+}

@@ -1,0 +1,243 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 10px;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./assets/fonts/Unbounded-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tilda';
+  src: url('./assets/fonts/TildaSans-VF.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Arrow_diag_left:before {
+  content: "\e900";
+}
+.icon-Arrow_diag_right:before {
+  content: "\e901";
+}
+.icon-Arrow_lbs:before {
+  content: "\e902";
+}
+.icon-Arrow_lts:before {
+  content: "\e903";
+}
+.icon-Arrow_m_bottom:before {
+  content: "\e904";
+}
+.icon-Arrow_m_left:before {
+  content: "\e905";
+}
+.icon-Arrow_m_right:before {
+  content: "\e906";
+}
+.icon-Arrow_m_top:before {
+  content: "\e907";
+}
+.icon-Avito .path1:before {
+  content: "\e908";
+  color: rgb(4, 224, 97);
+}
+.icon-Avito .path2:before {
+  content: "\e909";
+  margin-left: -1.08203125em;
+  color: rgb(255, 64, 83);
+}
+.icon-Avito .path3:before {
+  content: "\e90a";
+  margin-left: -1.08203125em;
+  color: rgb(150, 94, 235);
+}
+.icon-Avito .path4:before {
+  content: "\e90b";
+  margin-left: -1.08203125em;
+  color: rgb(0, 170, 255);
+}
+.icon-Done:before {
+  content: "\e90c";
+}
+.icon-Instagram:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-Menu_L:before {
+  content: "\e90e";
+}
+.icon-Menu_M:before {
+  content: "\e90f";
+}
+.icon-Menu_S:before {
+  content: "\e910";
+}
+.icon-Minus:before {
+  content: "\e911";
+}
+.icon-Plus:before {
+  content: "\e912";
+}
+.icon-Telegram:before {
+  content: "\e913";
+  color: #039be5;
+}
+.icon-Telegram_round .path1:before {
+  content: "\e914";
+  color: rgb(3, 155, 229);
+}
+.icon-Telegram_round .path2:before {
+  content: "\e915";
+  margin-left: -1.001953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-VK:before {
+  content: "\e916";
+  color: #2787f5;
+}
+.icon-VK_round .path1:before {
+  content: "\e917";
+  color: rgb(39, 135, 245);
+}
+.icon-VK_round .path2:before {
+  content: "\e918";
+  margin-left: -1.001953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-Wechat:before {
+  content: "\e919";
+  color: #2dc100;
+}
+.icon-Whatsapp:before {
+  content: "\e91a";
+  color: #25d366;
+}
+.icon-Whatsapp_round .path1:before {
+  content: "\e91b";
+  color: rgb(37, 211, 102);
+}
+.icon-Whatsapp_round .path2:before {
+  content: "\e91c";
+  margin-left: -1.001953125em;
+  color: rgb(255, 255, 255);
+}
+.icon-X:before {
+  content: "\e91d";
+}
+.icon-Arrow_lbr:before {
+  content: "\e91e";
+}
+.icon-Arrow_s_bottom:before {
+  content: "\e91f";
+}
+.icon-Arrow_s_left:before {
+  content: "\e920";
+}
+.icon-Arrow_s_right:before {
+  content: "\e921";
+}
+.icon-Arrow_s_top:before {
+  content: "\e922";
+}
+.icon-Dzen:before {
+  content: "\e923";
+}
+.icon-Pin:before {
+  content: "\e924";
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tilda';
+  color: rgba(17, 17, 17, 1);
+}
+
+body {
+  height: 200vh;
+}
+
+/* Сброс для ссылок (a) */
+a {
+  text-decoration: none; /* Убираем подчёркивание */
+  color: inherit; /* Наследуем цвет текста от родителя */
+  font-family: inherit; /* Наследуем шрифт */
+  font-size: inherit; /* Наследуем размер шрифта */
+  font-weight: inherit; /* Наследуем жирность шрифта */
+  cursor: pointer; /* Добавляем указатель мыши как у кнопок */
+  background-color: transparent; /* Убираем фон */
+  border: none; /* Убираем границы */
+  outline: none; /* Убираем стандартный фокус */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+/* Сброс для кнопок (button) */
+button {
+  appearance: none; /* Убираем стандартный вид кнопок в разных браузерах */
+  -webkit-appearance: none; /* Для Safari */
+  background-color: transparent; /* Убираем фон */
+  border: none; /* Убираем границы */
+  outline: none; /* Убираем стандартный фокус */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+  font-family: inherit; /* Наследуем шрифт */
+  font-size: inherit; /* Наследуем размер шрифта */
+  font-weight: inherit; /* Наследуем жирность шрифта */
+  color: inherit; /* Наследуем цвет текста */
+  cursor: pointer; /* Добавляем указатель мыши */
+  text-align: center; /* Центрируем текст внутри кнопки */
+  line-height: normal; /* Исправляем высоту строки */
+}
+
+/* Убираем эффект фокуса при нажатии (outline) */
+a:focus,
+button:focus {
+  outline: none;
+}
+
+/* Убираем эффект нажатия на мобильных устройствах */
+a:active,
+button:active {
+  outline: none;
+}
+
+.lcontainer {
+  width: 100%;
+  padding: 0 50px;
+}
