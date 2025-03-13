@@ -30,6 +30,10 @@
     gap: 10px;
   }
 
+  .slide__right img {
+    background: transparent;
+  }
+
   .slider__navigation button {
 		overflow: hidden;
     width: 50px;
