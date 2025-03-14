@@ -2,6 +2,18 @@ import logo from '../assets/logo.png';
 import dots from '../assets/dots.png';
 import { useState, useEffect, useRef } from 'react';
 
+function Branding() {
+    return (
+        <div className="branding__wrapper">
+            <img src={logo} alt="логотип" className="logo" />
+            <a href="/" className="naming">
+                <h2>РЕНТУС</h2>
+                <p>Аренда инструмента</p>
+            </a>
+        </div>
+    )
+}
+
 function Header() {
     const [isVisible, setVisible] = useState(true);
     const headerRef = useRef(null);
@@ -49,13 +61,7 @@ function Header() {
         <header ref={headerRef} style={headerStyle}>
             <div className="lcontainer">
                 <div className="header__inner">
-                    <div className="branding__wrapper">
-                        <img src={logo} alt="логотип" className="logo" />
-                        <a href="/" className="naming">
-                            <h1>РЕНТУС</h1>
-                            <p>Аренда инструмента</p>
-                        </a>
-                    </div>
+                    <Branding />
                     <button className="catalog__button">
                         <img src={dots} alt="" className="dots" /> Каталог
                     </button>
@@ -75,4 +81,4 @@ function Header() {
     );
 }
 
-export default Header;
+export {Branding, Header};

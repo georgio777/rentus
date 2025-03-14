@@ -1,0 +1,68 @@
+.docs__section {
+  background-color: #ecf0f5;
+  padding: 180px 0;
+}
+
+.invitation {
+  font-size: 2.2rem;
+  color: #4D5C71;
+  margin-bottom: 50px;
+}
+
+.three__docs {
+  width: 100%;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.doc {
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  background: white;
+  color: black;
+}
+
+.doc.selected {
+  color: white;
+  background-color: black;
+}
+
+.doc.selected .doc__bottom span {
+  color: white;
+}
+
+.doc h3, .doc p {
+  color: inherit;
+}
+
+
+
+.doc h3 {
+  font-family: 'Unbounded';
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.doc p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.doc__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: auto;
+}
+
+.doc__bottom img {
+  width: 50px;
+}
+
+.doc__bottom span {
+  font-size: 2.2rem;
+}

@@ -159,18 +159,49 @@ const Slider = () => {
               <h2 className="slide__heading">
                 Недорогая аренда строительного инструмента
               </h2>
-              <span className="open__modal1 open__modal_trigger">Связаться с нами</span>
+              <div className='advantages'>
+                <div className='advantage'>
+                  <h3>1 час</h3>
+                  <p>И нужный инструмент у вас </p>
+                </div>
+                <div className='advantage'>
+                  <h3>300 ₽</h3>
+                  <p>Рублей средняя ставка за час</p>
+                </div>
+                <div className='advantage'>
+                  <h3>550+</h3>
+                  <p>Клиентов уже выбрали нас </p>
+                </div>
+              </div>
             </div>
             <div className="slide__right">
-                <img src={img} alt="" />
+                <img src={img} alt="banner photo" />
             </div>
           </div>
         </div>
         <div className="slide second__slide" data-index="2">
-          <div className="slide__inner">
-            <div className="slide__bottom">
-              <h2 className="slide__heading">Lorem ipsum dolor sit amet</h2>
-              <span className="open__modal1 open__modal_trigger">Заказать звонок</span>
+        <div className="slide__inner">
+            <div className="slide__left">
+              <h2 className="slide__heading">
+                Недорогая аренда строительного инструмента
+              </h2>
+              <div className='advantages'>
+                <div className='advantage'>
+                  <h3>1 час</h3>
+                  <p>И нужный инструмент у вас </p>
+                </div>
+                <div className='advantage'>
+                  <h3>300 ₽</h3>
+                  <p>Рублей средняя ставка за час</p>
+                </div>
+                <div className='advantage'>
+                  <h3>550+</h3>
+                  <p>Клиентов уже выбрали нас </p>
+                </div>
+              </div>
+            </div>
+            <div className="slide__right">
+                <img src={img} alt="banner photo" />
             </div>
           </div>
         </div>

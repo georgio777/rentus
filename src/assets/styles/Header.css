@@ -1,3 +1,7 @@
+/* header {
+    border-bottom: 2px solid rgb(192, 192, 192);
+} */
+
 .header__inner {
     display: flex;
     align-items: center;
@@ -23,7 +27,7 @@
     align-items: start;
 }
 
-.naming h1 {
+.naming h2 {
     font-family: 'Unbounded';
     font-weight: 900;
     font-size: 3.8rem;

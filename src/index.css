@@ -241,3 +241,12 @@ button:active {
   width: 100%;
   padding: 0 50px;
 }
+
+.section__name {
+  color: #111111;
+  font-family: 'Unbounded';
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
