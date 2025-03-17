@@ -6,7 +6,7 @@ import Questions from './components/Questions'
 import Docs from './components/Docs'
 import Contacts from './components/Contacts'
 import Footer from './components/Footer'
-
+import ContactForm from './components/ContactForm'
 
 function App() {
 

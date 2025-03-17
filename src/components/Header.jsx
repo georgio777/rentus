@@ -67,9 +67,9 @@ function Header() {
                     </button>
                     <nav className="header__nav">
                         <ul>
-                            <li><a href="">Вопросы</a></li>
-                            <li><a href="">Документы</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="#questions">Вопросы</a></li>
+                            <li><a href="#docs">Документы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                     <a href="tel:+79046164040" className="header__tel">

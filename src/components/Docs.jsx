@@ -1,24 +1,20 @@
 import file from '../assets/file.svg'
-import file2 from '../assets/file2.svg'
 
 function Docs() {
   return (
-    <div className="docs__section">
+    <div id='docs' className="docs__section">
       <div className="lcontainer">
         <h2 className='section__name'>Документы</h2>
         <p className='invitation'>Приходите подписать договор. Заберите свой инструмент </p>
         <div className="three__docs">
           <div 
-          className="doc selected"
-          // style={{
-          //   color: isSelected? 'black' : 'white'
-          // }}
+          className="doc"
           >
             <h3>Договор ИП \ физлицо</h3>
             <p>Если вы арендуете инструмент как физическое лицо</p>
             <div className="doc__bottom">
               <span>220 kb</span>
-              <img src={file2} alt="file icon" />
+              <img src={file} alt="file icon" />
             </div>
           </div>
           <div className="doc">

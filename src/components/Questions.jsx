@@ -66,7 +66,7 @@ function Questions() {
 
   return (
     <div className="lcontainer">
-      <h2 className="section__name">Частые вопросы</h2>
+      <h2 id="questions" className="section__name">Частые вопросы</h2>
       <div className="accordion">
         {accordionData.map((item, index) => (
           <AccordionItem

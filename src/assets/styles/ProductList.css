@@ -78,3 +78,22 @@
   justify-content: center;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 670px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .product__name {
+    padding: 0 7px;
+  }
+  .product__attributes {
+    padding: 0 7px;
+    margin: 10px 0;
+  }
+}

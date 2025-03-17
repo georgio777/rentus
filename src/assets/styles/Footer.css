@@ -54,3 +54,24 @@ footer {
   font-size: 2rem;
   color: #4D5C71;
 }
+
+@media (max-width: 1024px) {
+  .footer__top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__top--item:nth-child(2) {
+    text-align: right;
+  }
+}
+
+@media (max-width: 670px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+  .footer__top--item:last-child {
+    margin-bottom: 30px;
+  }
+  .footer__bottom--inner {
+    flex-direction: column;
+  }
+}

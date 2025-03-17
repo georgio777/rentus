@@ -190,6 +190,12 @@
 
 body {
   height: 200vh;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+
 }
 
 /* Сброс для ссылок (a) */
@@ -249,4 +255,10 @@ button:active {
   font-weight: 400;
   margin-top: 80px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 670px) {
+  .lcontainer {
+    padding: 0 15px;
+  }
 }

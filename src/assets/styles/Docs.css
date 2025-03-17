@@ -22,15 +22,21 @@
   padding: 34px;
   background: white;
   color: black;
+  transition: .3s ease;
+  cursor: pointer;
 }
 
-.doc.selected {
+.doc:hover {
+  background: black;
   color: white;
-  background-color: black;
 }
 
-.doc.selected .doc__bottom span {
-  color: white;
+.doc:hover img {
+  filter: invert(100%);
+}
+
+.doc__bottom, .doc__bottom span {
+  color: inherit;
 }
 
 .doc h3, .doc p {
@@ -65,4 +71,13 @@
 
 .doc__bottom span {
   font-size: 2.2rem;
+}
+
+@media (max-width: 1024px) {
+  .three__docs {
+    grid-template-columns: 1fr;
+  }
+  .docs__section {
+    padding: 20px 0
+  }
 }

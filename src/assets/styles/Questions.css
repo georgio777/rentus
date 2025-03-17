@@ -91,3 +91,18 @@
   line-height: 1.5;
   color: #4D5C71;
 }
+
+
+@media (max-width: 670px) {
+	.accordion-title {
+		padding: 10px 7px;
+		font-size: 1.8rem;
+		padding-right: 40px;
+	}
+	.accordion-content {
+		padding: 0 7px;
+	}
+	.plus {
+		right: 7px;
+	}
+}

@@ -78,3 +78,30 @@
     font-weight: 600;
     font-family: 'Unbounded';
 }
+
+@media (max-width: 1200px) {
+    .catalog__button, .header__nav {
+        display: none;
+    }
+    .header__inner {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 670px) {
+    .header__tel {
+        font-size: 1.4rem;
+    }
+    .logo {
+        width: 40px;
+    }
+    .naming h2 {
+        font-size: 1.8rem;
+    }
+    .header__inner {
+        padding: 14px 0;
+    }
+    .header__tel {
+        font-size: 1.2rem;
+    }
+}

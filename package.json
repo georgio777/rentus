@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@yandex/smart-captcha": "2.7.0",
     "axios": "^1.8.3",
+    "date-fns": "^4.1.0",
     "react": "^19.0.0",
+    "react-datepicker": "^8.2.1",
+    "react-day-picker": "^9.6.2",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

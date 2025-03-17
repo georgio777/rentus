@@ -46,3 +46,12 @@
 .contacts__right {
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .contacts__inner {
+    flex-direction: column;
+  }
+  .contacts__left {
+    min-width: 0;
+  }
+}

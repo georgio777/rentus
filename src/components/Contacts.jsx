@@ -4,7 +4,7 @@ import tg from "../assets/tg.svg";
 
 function Contacts() {
   return (
-    <section className="contacts">
+    <section id="contacts" className="contacts">
       <div className="lcontainer">
         <div className="contacts__inner">
           {/* Левая часть (контакты) */}
