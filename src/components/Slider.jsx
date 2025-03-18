@@ -156,9 +156,9 @@ const Slider = () => {
         <div className="slide first__slide" data-index="1">
           <div className="slide__inner">
             <div className="slide__left">
-              <h2 className="slide__heading">
-                Недорогая аренда строительного инструмента
-              </h2>
+              <h1 className="slide__heading">
+                <span className="headingsmall">Недорогая</span><br /> аренда строительного инструмента
+              </h1>
               <div className='advantages'>
                 <div className='advantage'>
                   <h3>1 час</h3>

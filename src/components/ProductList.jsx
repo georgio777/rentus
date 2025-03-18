@@ -16,10 +16,6 @@ function ProductList() {
             });
     }, []);
 
-    useEffect(() => {
-        // Отслеживаем изменения состояния products
-        console.log("Текущие продукты:", products);
-    }, [products]);
 
     return (
         <div className="lcontainer">
@@ -31,7 +27,7 @@ function ProductList() {
                         <ProductCard key={item.id} item={item}/>
                     ))
                 ) : (
-                    <p>Нет доступных продуктов.</p>
+                    <div className="loader"></div>
                 )}
             </div>
         </div>

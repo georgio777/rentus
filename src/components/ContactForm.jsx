@@ -10,7 +10,7 @@ function ContactForm({ item, toggleModalForm }) {
   const [selectedRange, setSelectedRange] = useState({ from: null, to: null });
   const [formData, setFormData] = useState({
     product: item.name,
-    productAtr: item.attributes, // Исправлено с pruductAtr
+    productAtr: item.attributes[0].options[0], // Исправлено с pruductAtr
     name: '',
     phone: '',
     email: '',
@@ -19,6 +19,7 @@ function ContactForm({ item, toggleModalForm }) {
   });
   const [errors, setErrors] = useState({});
   const [response, setResponse] = useState('');
+  const [isFormVisible, setIsFormVisible] = useState(true); // Новое состояние для управления видимостью формы
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,15 +64,13 @@ function ContactForm({ item, toggleModalForm }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Токен капчи:', token); // Отладка
-    console.log('Данные формы:', formData);
 
     if (!validateForm()) {
       return;
     }
 
     try {
-      const res = await fetch('https://a1w.ru/sendmail.php', {
+      const res = await fetch('https://6164040.ru/sendmail.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -84,17 +83,7 @@ function ContactForm({ item, toggleModalForm }) {
       const data = await res.json();
       setResponse(data.message);
       if (data.status === 'success') {
-        setFormData({
-          product: item.name,
-          productAtr: item.attributes,
-          name: '',
-          phone: '',
-          email: '',
-          message: '',
-          dates: '',
-        });
-        setSelectedRange({ from: null, to: null });
-        setToken('');
+        setIsFormVisible(false); // Скрываем форму
       }
     } catch (error) {
       setResponse(`Ошибка подключения к серверу: ${error.message}`);
@@ -105,68 +94,75 @@ function ContactForm({ item, toggleModalForm }) {
     <div className="modal">
       <div onClick={toggleModalForm} className="close icon-X"></div>
       <h2>{formData.product}</h2>
-      <h3>Выберите даты</h3>
-      <form onSubmit={handleSubmit}>
-        <DayPicker
-          locale={ru}
-          mode="range"
-          selected={selectedRange}
-          onSelect={handleDateSelect}
-          hidden={{ before: startOfDay(new Date()) }}
-          styles={{
-            caption_label: { fontSize: "16px", fontWeight: "bold" },
-            cell: { padding: "15px" },
-          }}
-        />
-        {errors.dates && <p style={{ color: 'red' }}>{errors.dates}</p>}
 
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Ваше имя"
-          required
-        />
-        {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
+      {/* Условный рендеринг формы */}
+      {isFormVisible ? (
+        <form onSubmit={handleSubmit}>
+          <h3>Выберите даты</h3>
+          <DayPicker
+            locale={ru}
+            mode="range"
+            selected={selectedRange}
+            onSelect={handleDateSelect}
+            hidden={{ before: startOfDay(new Date()) }}
+            styles={{
+              caption_label: { fontSize: "16px", fontWeight: "bold" },
+              cell: { padding: "15px" },
+            }}
+          />
+          {errors.dates && <p style={{ color: 'red' }}>{errors.dates}</p>}
 
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="Номер телефона"
-          required
-        />
-        {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Ваше имя"
+            required
+          />
+          {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
 
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Ваш email"
-          required
-        />
-        {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Номер телефона"
+            required
+          />
+          {errors.phone && <p style={{ color: 'red' }}>{errors.phone}</p>}
 
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Сообщение"
-        />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Ваш email"
+            required
+          />
+          {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
 
-        <SmartCaptcha
-          sitekey="ysc1_HCnMqMEOPnTUaLzMUyHgzLwMICZL8I0obMuHxjxK7ebf2d79"
-          onSuccess={setToken}
-          robustnessLevel="medium" // Указываем уровень сложности
-        />
-        {errors.captcha && <p style={{ color: 'red' }}>{errors.captcha}</p>}
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Сообщение"
+          />
 
-        <button type="submit">Отправить</button>
-      </form>
-      {response && <p>{response}</p>}
+          <SmartCaptcha
+            sitekey="ysc1_HCnMqMEOPnTUaLzMUyHgzLwMICZL8I0obMuHxjxK7ebf2d79"
+            onSuccess={setToken}
+            robustnessLevel="medium" // Указываем уровень сложности
+          />
+          {errors.captcha && <p style={{ color: 'red' }}>{errors.captcha}</p>}
+
+          <button type="submit">Отправить</button>
+        </form>
+      ) : (
+        <div>
+          <p className='success__submission'>Спасибо! {response}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -253,8 +253,8 @@ button:active {
   font-family: 'Unbounded';
   font-size: 3.6rem;
   font-weight: 400;
-  margin-top: 80px;
-  margin-bottom: 30px;
+  margin: 80px auto 30px auto;
+  text-align: center;
 }
 
 @media (max-width: 670px) {

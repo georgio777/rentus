@@ -24,8 +24,8 @@ function ProductCard({item}) {
           )
         })}
       </div>
-      <div className="product__bottom">
-        <div onClick={toggleModalForm} className="date__picker"><img src={dateImg} alt="dates" /></div>
+      <div className="product__bottom"  onClick={toggleModalForm} >
+        <div className="date__picker"><img src={dateImg} alt="dates" /></div>
         <div className="product__price">От {item.price}₽ / сутки</div>
       </div>
     </div>

@@ -19,8 +19,10 @@
 .modal form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
-
+    width: 100%;
+    max-width: 600px;
     min-height: 0; /* Предотвращает сжатие формы */
 }
 
@@ -29,6 +31,7 @@
     top: 10px;
     right: 10px;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 input, textarea {
@@ -71,6 +74,10 @@ button[type='submit'] {
 .full-width-calendar .rdp {
     width: 100%;
     margin: 0; /* Убираем лишние отступы */
+}
+
+.success__submission {
+    font-size: 2rem;
 }
 
 @keyframes modal-opener {
