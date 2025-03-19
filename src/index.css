@@ -261,4 +261,7 @@ button:active {
   .lcontainer {
     padding: 0 15px;
   }
+  .section__name {
+    font-size: 2rem;
+  }
 }

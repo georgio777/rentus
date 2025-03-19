@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import ru from "date-fns/locale/ru";
-import { startOfDay, format } from "date-fns";
+import { format } from "date-fns";
 import { SmartCaptcha } from '@yandex/smart-captcha';
 
 function ContactForm({ item, toggleModalForm }) {
@@ -104,7 +104,8 @@ function ContactForm({ item, toggleModalForm }) {
             mode="range"
             selected={selectedRange}
             onSelect={handleDateSelect}
-            hidden={{ before: startOfDay(new Date()) }}
+            disabled={{ before: new Date() }}
+            showOutsideDays={true}
             styles={{
               caption_label: { fontSize: "16px", fontWeight: "bold" },
               cell: { padding: "15px" },

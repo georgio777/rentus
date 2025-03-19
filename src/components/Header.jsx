@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.svg';
 import dots from '../assets/dots.png';
 import phone from '../assets/phone.svg';
 import { useEffect, useRef, useState } from 'react';
@@ -116,7 +116,12 @@ function Header() {
                 }}
                 className="sidemenu"
             >
-                {/* Контент sidemenu */}
+                    <button className="catalog__button">
+                        <img src={dots} alt="" className="dots" /> Ремонт
+                    </button>
+                    <button className="catalog__button">
+                            <img src={dots} alt="" className="dots" /> Каталог
+                    </button>
             </div>
         </header>
     );

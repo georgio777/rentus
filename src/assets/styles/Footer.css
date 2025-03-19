@@ -1,12 +1,12 @@
 footer {
   background-color: #ECF0F5;
-  padding: 70px 0 50px 0;
 }
 
 .footer__top {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 70px 0 40px 0;
 }
 
 .footer__top--item {
@@ -41,17 +41,17 @@ footer {
 
 .footer__bottom {
   border-top: 1px solid rgb(192, 192, 192);
+  padding: 20px 0;
 }
 
 .footer__bottom--inner {
-  margin-top: 42px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .footer__bottom--inner p, .footer__bottom--inner a {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #4D5C71;
 }
 
@@ -60,8 +60,12 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer__top--item:nth-child(2) {
-    text-align: right;
+    text-align: left;
   }
+  .footer__top--item:last-child {
+    align-items: start;
+  }
+
 }
 
 @media (max-width: 670px) {

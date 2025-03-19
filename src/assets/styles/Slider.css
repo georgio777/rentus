@@ -40,7 +40,7 @@
       display: flex;
       width: 100%;
       gap: 20px;
-      justify-content: space-between;
+      justify-content: start;
     }
 
     .advantage {
@@ -48,6 +48,7 @@
       padding: 24px;
       position: relative;
       cursor: pointer;
+      transition: .2s;
     }
 
     .advantage::after {
@@ -62,6 +63,7 @@
       top: 0;
       left: 0;
       transform: rotate(45deg) translate(-8px, -5px);
+      transition: .2s;
     }
 
     .advantage:hover {
@@ -77,6 +79,7 @@
       font-size: 2.6rem;
       font-weight: 400;
       color: #000000;
+      margin-bottom: 10px;
     }
 
     .advantage p {
@@ -119,7 +122,8 @@
     background-color: rgb(251, 246, 229);
 		display: flex;
 		justify-content: center;
-		align-items: center
+		align-items: center;
+    transition: .2s;
   }
 
 .bt__span  {
@@ -180,16 +184,7 @@
   .pagination button.active {
     background:rgba(34, 108, 255, 1);
   }
-  .first__slide {
-    background: url(/wp-content/uploads/2025/03/freepik__expand__63981-2.webp);
-    background-size: cover;
-    background-position: center;
-  }
-  .second__slide {
-    background: url(/wp-content/uploads/2025/03/freepik__expand__63981-2.webp);    
-    background-size: cover;
-    background-position: center;
-  }
+
 
   .slide__mail a {
     color: white;
@@ -219,8 +214,7 @@
 
   .slide__heading {
 		font-size: 4.1rem;;
-		margin-bottom: 32px;
-		line-height: 1em;
+		margin-bottom: 52px;
 		vertical-align:bottom;
 		font-weight: 400;
     font-family: 'Unbounded';
@@ -242,8 +236,24 @@
   z-index: 2;
 }
 
-
 @media (max-width: 1366px) {
+  .slide__right img {
+    width: 100%;
+    height: auto;
+  }
+  .advantage p {
+    font-size: 1.6rem;
+  }
+  .advantage h3 {
+    font-size: 2.4rem;
+  }
+  .advantage {
+    padding: 16px;
+  }
+}
+
+
+@media (max-width: 1024px) {
   .slide__inner {
     flex-direction: column-reverse;
   }
@@ -256,6 +266,9 @@
   }
   .slide__left {
     width: 100%;
+  }
+  .advantages {
+    justify-content: start;
   }
 }
 
@@ -280,8 +293,11 @@
   .headingsmall {
     font-size: 1.2rem;
   }
+  .advantages {
+    gap: 7px;
+  }
   .advantage h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .advantage p {
     font-size: 1.2rem;
