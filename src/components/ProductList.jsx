@@ -19,7 +19,7 @@ function ProductList() {
 
     return (
         <div className="lcontainer">
-            <h2 className="section__name">Каталог инструментов</h2>
+            <h2 id="catalog" className="section__name">Каталог инструментов</h2>
             <div className="products">
                 {/* Проверяем, есть ли продукты */}
                 {products.length > 0 ? (

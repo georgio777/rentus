@@ -21,9 +21,8 @@ const AccordionItem = React.memo(({ title, content, isOpen, onClick }) => {
         style={{
           maxHeight: isOpen ? "500px" : "0",
         }}
-      >
-        <p>{content}</p>
-      </div>
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </div>
   );
 });
@@ -38,30 +37,24 @@ function Questions() {
 
   const accordionData = [
     {
-      title: "Это ваш первый полноценный интересный вопрос",
+      title: "1. Требуется ли залог?",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "- Да, залог для аренды инструмента необходим",
     },
     {
-      title: "Это ваш первый полноценный интересный вопрос",
+      title: "2. Какие документы нужны для ФИЗЛИЦ?",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "- Для заключения договора проката строительного оборудования с физическим лицом, вам необходимо предоставить:<br /> документ удостоверяющий личность (паспорт рос./загран);<br /> второй документ (водительское удостоверение / СНИЛС).",
     },
     {
-      title: "Это ваш первый полноценный интересный вопрос",
+      title: "3. Какие документы нужны для ЮрЛиц",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "- Реквизиты; Свидетельство ИНН; После заключения договора для получения инструмента с собой необходимо каждый раз иметь:<br /> Доверенность от имени организации на получение инструмента;<br /> Личный паспорт;<br /> Осуществить предоплату на весь срок предполагаемой аренды.",
     },
     {
-      title: "Это ваш первый полноценный интересный вопрос",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      title: "Это ваш первый полноценный интересный вопрос",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
+      title: "4. Есть ли у Вас доставка ?",
+      content: "Да, доставка есть - как нашими силами, так и Яндекс.Доставкой"
+    }
   ];
 
   return (

@@ -15,6 +15,16 @@ function Branding() {
     );
 }
 
+function Button({href, img={dots}, title}) {
+    return (
+        <a href={href}>
+            <button className="catalog__button">
+                <img src={img} alt="" className="dots" />{title}
+            </button>
+        </a>
+    )
+}
+
 function Header() {
     const [headerColor, setColor] = useState('#fbf6e5');
     const sideRef = useRef(null);
@@ -116,15 +126,11 @@ function Header() {
                 }}
                 className="sidemenu"
             >
-                    <button className="catalog__button">
-                        <img src={dots} alt="" className="dots" /> Ремонт
-                    </button>
-                    <button className="catalog__button">
-                            <img src={dots} alt="" className="dots" /> Каталог
-                    </button>
+                <Button href='https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx' img={dots} title='Ремонт' />
+                <Button href='#catalog' img={dots} title='Каталог' />
             </div>
         </header>
     );
 }
 
-export { Branding, Header };
+export { Branding, Header, Button };

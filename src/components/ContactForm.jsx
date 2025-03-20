@@ -91,7 +91,9 @@ function ContactForm({ item, toggleModalForm }) {
   };
 
   return (
-    <div className="modal">
+    <div
+    onClick={(e)=>e.stopPropagation()}
+    className="modal">
       <div onClick={toggleModalForm} className="close icon-X"></div>
       <h2>{formData.product}</h2>
 

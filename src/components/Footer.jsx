@@ -1,5 +1,6 @@
 import { Branding } from "./Header"
 
+
 function Footer() {
   return (
     <footer>
@@ -9,14 +10,14 @@ function Footer() {
             <Branding />
           </div>
           <div className="footer__top--item">
-            <h2>О компании</h2>
-            <p>Услуги</p>
-            <p>Отзывы</p>
+            <h2>Услуги</h2>
+            <a href="#catalog">Каталог</a>
+            <a href="https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx">Ремонт</a>
           </div>
           <div className="footer__top--item">
-            <h2>Партнерам</h2>
-            <p>Карьера</p>
-            <p>Безопасность</p>
+            <h2>О компании</h2>
+            <a href="#docs">Документы</a>
+            <a href="#contacts">Контакты</a>
           </div>
           <div className="footer__top--item">
             <a href="tel:+78126164040">+7 812 616-40-40</a>

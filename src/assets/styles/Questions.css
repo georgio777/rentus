@@ -60,29 +60,20 @@
   background: #DDE1EC;
 }
 
-/* .accordion-title::after {
-  content: '+';
-  position: absolute;
-  right: 20px;
-  font-size: 24px;
-  font-weight: 100;
-}
-
-.accordion-title.active::after {
-  content: '−';
-} */
-
 .accordion-content {
   max-height: 0; /* Начальная высота */
   overflow: hidden; /* Для плавности */
   padding: 0 40px; /* Отступы скрыты при закрытии */
-  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Анимация */
+  transition: max-height 0.3s, padding 0.3s ease-in-out; /* Анимация */
 	font-size: 2rem;
 	font-weight:400;
 }
 
 .accordion-content.active {
   max-height: 500px; 
+  padding-top: 14px;
+  padding-bottom: 14px;
+
 }
 
 .accordion-content p {
@@ -96,13 +87,13 @@
 @media (max-width: 670px) {
 	.accordion-title {
 		padding: 10px 7px;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		padding-right: 40px;
 	}
 	.accordion-content {
 		padding: 0 7px;
 	}
-	.accordion-content p {
+	.accordion-content  {
 		font-size: 1.6rem;
 	}
 	.plus {

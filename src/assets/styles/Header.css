@@ -18,11 +18,12 @@ header {
     width: 100%;
 }
 
-.header__item:last-child {
+.header__item:nth-child(5) {
     border-right: none;
     padding-right: 0;
     justify-content: end;
     min-width: 230px;
+    margin-left: 28px;
 }
 
 .header__item:first-child {
@@ -73,6 +74,7 @@ header {
     font-family: 'Unbounded';
     font-size: 1.6rem;
     gap: 10px;
+    width: fit-content;
 }
 
 .dots {
@@ -205,5 +207,12 @@ header {
     }
     .naming p {
         font-size: 0.8rem;
+    }
+    .header__item:nth-child(5) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: 0;
+        justify-content: end;
+        min-width: 0;
+        margin-left: 0;
     }
 }

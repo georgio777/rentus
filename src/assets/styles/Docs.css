@@ -101,3 +101,19 @@
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 670px) {
+  .doc h3 {
+    font-size: 1.8rem;
+  }
+  .doc p {
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+  .doc {
+    padding: 20px;
+  }
+  .doc span {
+    font-size: 1.6rem;
+  }
+}

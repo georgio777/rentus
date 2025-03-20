@@ -263,5 +263,6 @@ button:active {
   }
   .section__name {
     font-size: 2rem;
+    margin-top: 50px;
   }
 }

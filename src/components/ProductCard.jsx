@@ -10,7 +10,7 @@ function ProductCard({item}) {
   }
 
   return (
-    <div className="product">
+    <div className="product" onClick={toggleModalForm} >
       { isOpen && <ContactForm item={item} toggleModalForm={toggleModalForm}/>}
       <img className="product__img" src={item.images[0]?.src} alt={item.name} />
       <h3 className="product__name">{item.name}</h3>
@@ -24,7 +24,7 @@ function ProductCard({item}) {
           )
         })}
       </div>
-      <div className="product__bottom"  onClick={toggleModalForm} >
+      <div className="product__bottom">
         <div className="date__picker"><img src={dateImg} alt="dates" /></div>
         <div className="product__price">От {item.price}₽ / сутки</div>
       </div>

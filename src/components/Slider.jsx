@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import img from '../assets/bannerpic.png'
+import img from '../assets/bannerpic.png';
+import img2 from '../assets/bannerpic2.png';
 
 const Slider = () => {
   useEffect(() => {
@@ -179,32 +180,33 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        <div className="slide second__slide" data-index="2">
-        <div className="slide__inner">
+        <div className="slide first__slide" data-index="2">
+          <div className="slide__inner">
             <div className="slide__left">
-              <h2 className="slide__heading">
-                Недорогая аренда строительного инструмента
-              </h2>
+              <h1 className="slide__heading">
+                <span className="headingsmall">качественный</span><br />Ремонт строительного инструмента
+              </h1>
               <div className='advantages'>
                 <div className='advantage'>
-                  <h3>1 час</h3>
-                  <p>И нужный инструмент у вас </p>
+                  <h3>до 2 лет </h3>
+                  <p>Гарантия на ремонт до 2 лет</p>
                 </div>
                 <div className='advantage'>
-                  <h3>300 ₽</h3>
-                  <p>Рублей средняя ставка за час</p>
+                  <h3>200+</h3>
+                  <p>позиций в прайс-листе. Чиним все! </p>
                 </div>
                 <div className='advantage'>
-                  <h3>550+</h3>
-                  <p>Клиентов уже выбрали нас </p>
+                  <h3>2 дня</h3>
+                  <p>очередь на ремонт не более 2х дней</p>
                 </div>
               </div>
             </div>
             <div className="slide__right">
-                <img src={img} alt="banner photo" />
+                <img src={img2} alt="banner photo" />
             </div>
           </div>
         </div>
+
       </div>
       <div className="slider__navigation">
         <button id="prev" className=' icon-Arrow_s_left'>

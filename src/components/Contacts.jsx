@@ -28,60 +28,98 @@ function Contacts() {
 
           {/* Правая часть (карта) */}
           <div className="contacts__right">
-            <div style={{ position: "relative", overflow: "hidden",height: '100%', borderRadius: '14px' }}>
-              {/* Текстовые ссылки для карты */}
+            <div className="map__wrapper">
+              <h3>Аренда</h3>
+              <div style={{ position: 'relative', overflow: 'hidden', width: '100%', borderRadius: '14px' }}>
+              {/* Ссылка на карту Санкт-Петербурга */}
               <a
-                href="https://yandex.ru/maps/org/lakhta_tsentr/71693345624/?utm_medium=mapframe&utm_source=maps"
+                href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
                 style={{
-                  color: "#eee",
-                  fontSize: "12px",
-                  position: "absolute",
-                  top: "0px",
+                  color: '#eee',
+                  fontSize: '12px',
+                  position: 'absolute',
+                  top: '0px',
                 }}
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                Лахта центр
-              </a>
-              <a
-                href="https://yandex.ru/maps/2/saint-petersburg/category/business_center/184107509/?utm_medium=mapframe&utm_source=maps"
-                style={{
-                  color: "#eee",
-                  fontSize: "12px",
-                  position: "absolute",
-                  top: "14px",
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Бизнес-центр в Санкт‑Петербурге
-              </a>
-              <a
-                href="https://yandex.ru/maps/2/saint-petersburg/category/landmark_attraction/89683368508/?utm_medium=mapframe&utm_source=maps"
-                style={{
-                  color: "#eee",
-                  fontSize: "12px",
-                  position: "absolute",
-                  top: "28px",
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Достопримечательность в Санкт‑Петербурге
+                Санкт‑Петербург
               </a>
 
-              {/* Фрейм карты */}
+              {/* Ссылка на конкретный адрес */}
+              <a
+                href="https://yandex.ru/maps/10174/saint-petersburg-and-leningrad-oblast/house/industrialnaya_ulitsa_22/Z0kYcAZlQEAOQFtjfXVwdXxmYg==/?ll=30.620298%2C59.926906&utm_medium=mapframe&utm_source=maps&z=10.58"
+                style={{
+                  color: '#eee',
+                  fontSize: '12px',
+                  position: 'absolute',
+                  top: '14px',
+                }}
+              >
+                Индустриальная улица, 22 — Яндекс Карты
+              </a>
+
+              {/* Встраиваемая карта */}
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=30.194673%2C59.981815&mode=poi&poi%5Bpoint%5D=30.178003%2C59.987116&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D71693345624&z=14.4"
+                src="https://yandex.ru/map-widget/v1/?ll=30.620298%2C59.926906&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo2MTA5Nzg3MTU1EqwC0KDQvtGB0YHQuNGPLCDQm9C10L3QuNC90LPRgNCw0LTRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0JLRgdC10LLQvtC70L7QttGB0LrQuNC5INGA0LDQudC-0L0sINCX0LDQvdC10LLRgdC60L7QtSDQs9C-0YDQvtC00YHQutC-0LUg0L_QvtGB0LXQu9C10L3QuNC1LCDRgtC10YDRgNC40YLQvtGA0LjRjyDQodC-0YDQttCwLdCh0YLQsNGA0LDRjyDQv9GA0L7QuNC30LLQvtC00YHRgtCy0LXQvdC90L4t0YHQutC70LDQtNGB0LrQsNGPINC30L7QvdCwLCDQmNC90LTRg9GB0YLRgNC40LDQu9GM0L3QsNGPINGD0LvQuNGG0LAsIDIyIgoNfu30QRX-p29C&utm_medium=mapframe&utm_source=maps&z=10.58"
                 width="100%"
-                height="100%"
-                frameBorder="0"
-                allowFullScreen
-                title="Yandex Map"
-                style={{ position: "relative" }}
+                height="400"
+                title="Яндекс Карта: Индустриальная улица, 22"
+                style={{
+                  position: 'relative',
+                  border: '1px solid #ccc', // Замена frameborder
+                }}
+                allowFullScreen={true} // Используйте camelCase для атрибутов
               ></iframe>
             </div>
+            </div>
+
+            <div className="map__wrapper">
+              <h3>Ремонт</h3>
+              <div style={{ position: 'relative', overflow: 'hidden', width: '100%', borderRadius: '14px' }}>
+            {/* Ссылка на карту Санкт-Петербурга */}
+            <a
+              href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+              style={{
+                color: '#eee',
+                fontSize: '12px',
+                position: 'absolute',
+                top: '0px',
+              }}
+            >
+              Санкт‑Петербург
+            </a>
+
+            {/* Ссылка на конкретный адрес */}
+            <a
+              href="https://yandex.ru/maps/2/saint-petersburg/house/ulitsa_marshala_kazakova_35k12/Z0kYdAdoQEUBQFtjfXR3dX5jbQ==/?ll=30.234506%2C59.866546&utm_medium=mapframe&utm_source=maps&z=13.36"
+              style={{
+                color: '#eee',
+                fontSize: '12px',
+                position: 'absolute',
+                top: '14px',
+              }}
+            >
+              Улица Маршала Казакова, 35к12 — Яндекс Карты
+            </a>
+
+            {/* Встраиваемая карта */}
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=30.234506%2C59.866546&mode=whatshere&whatshere%5Bpoint%5D=30.208906%2C59.864209&whatshere%5Bzoom%5D=16&z=13.36"
+              width="100%"
+              height="400"
+              title="Яндекс Карта: Улица Маршала Казакова, 35к12"
+              style={{
+                position: 'relative',
+                border: '1px solid #ccc', // Замена frameborder
+              }}
+              allowFullScreen={true} // Используйте camelCase для атрибутов
+            ></iframe>
           </div>
+            </div>
+
+
+
+          </div>
+
         </div>
       </div>
     </section>

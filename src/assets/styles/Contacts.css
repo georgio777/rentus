@@ -45,6 +45,19 @@
 
 .contacts__right {
   width: 100%;
+  display: flex;
+  gap: 10px;
+  /* flex-direction: column; */
+}
+
+.map__wrapper {
+  width: 100%;
+}
+
+.map__wrapper h3 {
+  font-family: 'Unbounded';
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 @media (max-width: 1024px) {
@@ -53,5 +66,24 @@
   }
   .contacts__left {
     min-width: 0;
+  }
+  .contacts__right {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 670px) {
+  .contacts__left h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .contacts__left p {
+    font-size: 1.6rem;
+  }
+  .contacts__left a {
+    font-size: 1.6rem;
+  }
+  .contacts {
+    padding-top: 70px;
   }
 }
