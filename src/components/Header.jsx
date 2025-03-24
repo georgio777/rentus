@@ -88,14 +88,14 @@ function Header() {
                 <div className="header__inner">
                     <div className="header__item"><Branding /></div>
                     <div className="header__item">
-                        <button className="catalog__button">
+                        <a href='#catalog' className="catalog__button">
                             <img src={dots} alt="" className="dots" /> Каталог
-                        </button>
+                        </a>
                     </div>
                     <div className="header__item">
-                        <button className="catalog__button">
+                        <a href='https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx' className="catalog__button">
                             <img src={dots} alt="" className="dots" /> Ремонт
-                        </button>
+                        </a>
                     </div>
                     <div className="header__item">
                         <nav className="header__nav">
