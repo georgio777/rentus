@@ -128,6 +128,13 @@ function Header() {
             >
                 <Button href='https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx' img={dots} title='Ремонт' />
                 <Button href='#catalog' img={dots} title='Каталог' />
+                <nav className="header__nav">
+                    <ul>
+                        <li><a href="#questions">Вопросы</a></li>
+                        <li><a href="#docs">Документы</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
     );

@@ -4,18 +4,32 @@ import ProductCard from "./ProductCard";
 
 function ProductList() {
     const [products, setProducts] = useState([]);
+    const cacheKey = "cachedProducts"; // Ключ для localStorage
 
     useEffect(() => {
-        // Получаем продукты и обновляем состояние
+        // Проверяем, есть ли данные в localStorage
+        const cachedData = localStorage.getItem(cacheKey);
+        if (cachedData) {
+            setProducts(JSON.parse(cachedData)); // Устанавливаем кэшированные данные сразу
+        }
+
+        // Запрашиваем данные с сервера
         getProducts()
-            .then((data) => {
-                setProducts(data);
+            .then((serverData) => {
+                // Сравниваем данные с сервера с кэшированными
+                const cached = cachedData ? JSON.parse(cachedData) : [];
+                const isDataDifferent = JSON.stringify(serverData) !== JSON.stringify(cached);
+
+                if (isDataDifferent) {
+                    // Если данные отличаются, обновляем состояние и localStorage
+                    setProducts(serverData);
+                    localStorage.setItem(cacheKey, JSON.stringify(serverData));
+                }
             })
             .catch((error) => {
                 console.error("Ошибка при загрузке продуктов:", error);
             });
-    }, []);
-
+    }, []); // Пустой массив зависимостей, чтобы эффект сработал только при монтировании
 
     return (
         <div className="lcontainer">
@@ -24,7 +38,7 @@ function ProductList() {
                 {/* Проверяем, есть ли продукты */}
                 {products.length > 0 ? (
                     products.map((item) => (
-                        <ProductCard key={item.id} item={item}/>
+                        <ProductCard key={item.id} item={item} />
                     ))
                 ) : (
                     <div className="loader"></div>
