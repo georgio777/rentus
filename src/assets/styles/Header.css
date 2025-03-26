@@ -23,7 +23,7 @@ header {
     padding-right: 0;
     justify-content: end;
     min-width: 230px;
-    margin-left: 28px;
+    /* margin-left: 28px; */
 }
 
 .header__item:first-child {
@@ -171,8 +171,6 @@ header {
 
 
 @media (max-width: 1680px) {
-    .header__item:nth-child(2),
-    .header__item:nth-child(3),
     .header__item:nth-child(4) {
         display: none;
     }
