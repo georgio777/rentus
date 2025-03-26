@@ -13,7 +13,7 @@ const Slider = () => {
     let offset = slidesContainer.children[0].offsetWidth;
     let autoSlideInterval;
     let interval = 3500; // Интервал в миллисекундах для автопрокрутки
-    let setAutoSlide = false;
+    let setAutoSlide = true;
 
     // Initialize pagination with "current | total" format
     const paginationText = document.createElement('span');
