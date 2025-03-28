@@ -4,8 +4,11 @@ import "react-day-picker/dist/style.css";
 import ru from "date-fns/locale/ru";
 import { format } from "date-fns";
 import { SmartCaptcha } from '@yandex/smart-captcha';
+import { useNavigate } from 'react-router';
 
 function ContactForm({ item, toggleModalForm }) {
+  const navigate = useNavigate();
+
   const [token, setToken] = useState('');
   const [selectedRange, setSelectedRange] = useState({ from: null, to: null });
   const [formData, setFormData] = useState({
@@ -19,7 +22,6 @@ function ContactForm({ item, toggleModalForm }) {
   });
   const [errors, setErrors] = useState({});
   const [response, setResponse] = useState('');
-  const [isFormVisible, setIsFormVisible] = useState(true); // Новое состояние для управления видимостью формы
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -83,7 +85,7 @@ function ContactForm({ item, toggleModalForm }) {
       const data = await res.json();
       setResponse(data.message);
       if (data.status === 'success') {
-        setIsFormVisible(false); // Скрываем форму
+        navigate('/spasibo')
       }
     } catch (error) {
       setResponse(`Ошибка подключения к серверу: ${error.message}`);
@@ -97,8 +99,7 @@ function ContactForm({ item, toggleModalForm }) {
       <div onClick={toggleModalForm} className="close icon-X"></div>
       <h2>{formData.product}</h2>
 
-      {/* Условный рендеринг формы */}
-      {isFormVisible ? (
+
         <form onSubmit={handleSubmit}>
           <h3>Выберите даты</h3>
           <DayPicker
@@ -161,11 +162,7 @@ function ContactForm({ item, toggleModalForm }) {
 
           <button type="submit">Отправить</button>
         </form>
-      ) : (
-        <div>
-          <p className='success__submission'>Спасибо! {response}</p>
-        </div>
-      )}
+
     </div>
   );
 }
