@@ -2,6 +2,7 @@ import logo from '../assets/logo.svg';
 import dots from '../assets/dots.png';
 import phone from '../assets/phone.svg';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 
 function Branding() {
     return (
@@ -93,9 +94,9 @@ function Header() {
                         </a>
                     </div>
                     <div className="header__item">
-                        <a href='https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx' className="catalog__button">
+                        <Link to='/price' className="catalog__button">
                             <img src={dots} alt="" className="dots" /> Ремонт
-                        </a>
+                        </Link>
                     </div>
                     <div className="header__item">
                         <nav className="header__nav">
@@ -126,13 +127,14 @@ function Header() {
                 }}
                 className="sidemenu"
             >
-                <Button href='https://www.wp.6164040.ru/wp-content/uploads/2025/03/rentus-remont-prajs-list_v1.2-1.xlsx' img={dots} title='Ремонт' />
-                <Button href='#catalog' img={dots} title='Каталог' />
+                        <Link to='/price' className="catalog__button">
+                            <img src={dots} alt="" className="dots" /> Ремонт
+                        </Link>                <Button href='#catalog' img={dots} title='Каталог' />
                 <nav className="header__nav">
                     <ul>
-                        <li><a href="#questions">Вопросы</a></li>
-                        <li><a href="#docs">Документы</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
+                        <li><a href="/#questions">Вопросы</a></li>
+                        <li><a href="/#docs">Документы</a></li>
+                        <li><a href="/#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
