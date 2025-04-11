@@ -7,8 +7,8 @@ import '../assets/styles/Price.css'
 
 const parsePriceData = async () => {
   try {
-    const url = 'https://www.wp.6164040.ru/wp-content/uploads/2025/04/price.xlsx';
-    // const url = '../../price.xlsx'
+    // const url = 'https://www.wp.6164040.ru/wp-content/uploads/2025/04/price.xlsx';
+    const url = '../../price.xlsx'
     const response = await fetch(url);
     if (!response.ok) throw new Error('Не удалось загрузить файл');
     const data = await response.arrayBuffer();

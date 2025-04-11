@@ -27,7 +27,7 @@ function Button({href, img={dots}, title}) {
 }
 
 function Header() {
-    const [headerColor, setColor] = useState('#fbf6e5');
+    const [headerColor, setColor] = useState('white');
     const sideRef = useRef(null);
     const [isOpen, setOpen] = useState(false);
 
@@ -89,7 +89,7 @@ function Header() {
                 <div className="header__inner">
                     <div className="header__item"><Branding /></div>
                     <div className="header__item">
-                        <a href='#catalog' className="catalog__button">
+                        <a href='/#catalog' className="catalog__button">
                             <img src={dots} alt="" className="dots" /> Каталог
                         </a>
                     </div>
@@ -101,9 +101,9 @@ function Header() {
                     <div className="header__item">
                         <nav className="header__nav">
                             <ul>
-                                <li><a href="#questions">Вопросы</a></li>
-                                <li><a href="#docs">Документы</a></li>
-                                <li><a href="#contacts">Контакты</a></li>
+                                <li><a href="/#questions">Вопросы</a></li>
+                                <li><a href="/#docs">Документы</a></li>
+                                <li><a href="/#contacts">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>
