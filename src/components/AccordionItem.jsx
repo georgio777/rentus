@@ -19,7 +19,7 @@ const AccordionItem = React.memo(({ title, content, isOpen, onClick }) => {
       <div
         className={`accordion-content ${isOpen ? "active" : ""}`}
         style={{
-          maxHeight: isOpen ? "1500px" : "0",
+          maxHeight: isOpen ? "7500px" : "0",
         }}>
           {content}
       </div>

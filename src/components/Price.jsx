@@ -3,6 +3,7 @@ import AccordionItem from './AccordionItem';
 import { Header } from './Header';
 import Footer from './Footer';
 import * as XLSX from 'xlsx';
+import '../assets/styles/Price.css'
 
 const parsePriceData = async () => {
   try {
